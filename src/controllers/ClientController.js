@@ -4,9 +4,9 @@ const Client = mongoose.model('Client')
 
 module.exports = {
     async index(req, res) {
-        const  people = await Client.find()
+        const  client = await Client.find()
 
-        return res.json(people)
+        return res.json(client)
     },
 
     async store(req, res) {
