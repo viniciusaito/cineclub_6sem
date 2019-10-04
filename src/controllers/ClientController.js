@@ -1,34 +1,34 @@
 const mongoose = require('mongoose')
 
-const Person = mongoose.model('Person')
+const Client = mongoose.model('Client')
 
 module.exports = {
     async index(req, res) {
-        const  people = await Person.find()
+        const  people = await Client.find()
 
         return res.json(people)
     },
 
     async store(req, res) {
-        const person = await Person.create(req.body)
+        const client = await Client.create(req.body)
 
-        return res.json(person)
+        return res.json(client)
     },
 
     async show(req, res) {
-        const person = await Person.findById(req.params.id)
+        const client = await Client.findById(req.params.id)
 
-        return res.json(person)
+        return res.json(client)
     },
 
     async update(req, res) {
-        const person = await Person.findByIdAndUpdate(req.params.id, req.body, { new:true })
+        const client = await Client.findByIdAndUpdate(req.params.id, req.body, { new:true })
 
-        return res.json(person);
+        return res.json(client);
     },
 
     async destroy(req, res) {
-        await Person.findByIdAndRemove(req.params.id)
+        await Client.findByIdAndRemove(req.params.id)
 
         return res.send()
     }

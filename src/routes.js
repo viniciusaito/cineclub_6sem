@@ -16,4 +16,6 @@ routes.post('/client', ClientController.store)
 routes.put('/client/:id', ClientController.update)
 routes.delete('/client/:id', ClientController.destroy)
 
+
+
 module.exports = routes

@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json())
 
 mongoose.connect( //user@password apos mongodb://
-    'mongodb://172.17.242.164:27017/nodeapi',
+    'mongodb://192.168.129.215:27017/nodeapi',
     { useNewUrlParser: true}
 );
 require('./src/models/Person')
